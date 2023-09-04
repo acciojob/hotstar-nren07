@@ -23,6 +23,7 @@ public class SubscriptionController {
 
         //We need to buy subscription and save its relevant subscription to the db and return the finalAmount
 
+//        return subscriptionService.buySubscription(subscriptionEntryDto);
         return subscriptionService.buySubscription(subscriptionEntryDto);
     }
 
@@ -36,6 +37,7 @@ public class SubscriptionController {
         //and at the end return the difference in fare that you need to pay to get this subscription done.
         try{
             return subscriptionService.upgradeSubscription(userId);
+//            return 0;
         }catch (Exception e){
             return -1;
         }
